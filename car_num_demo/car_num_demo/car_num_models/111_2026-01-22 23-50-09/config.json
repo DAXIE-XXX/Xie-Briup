@@ -1,0 +1,12 @@
+{
+  "model_type": "car_yolo_ocr",
+  "model_name": "111",
+  "upload_time": "2026-01-22 23-50-09",
+  "yolo_file": "yolo_best.onnx",
+  "ocr_file": "ocr_best.onnx",
+  "ocr_dict_file": "ppocr_keys_v1.txt",
+  "conf": "0.6",
+  "iou": "0.5",
+  "ocr_shape": "3,48,320",
+  "padding": "True"
+}

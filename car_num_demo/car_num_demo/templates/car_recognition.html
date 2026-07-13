@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车牌识别 - AI识别系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .model-selector {
+            margin-bottom: 30px;
+        }
+
+        .model-selector label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .model-selector select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            background: #fafafa;
+            cursor: pointer;
+        }
+
+        .model-selector select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+        }
+
+        .mode-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .mode-tab {
+            flex: 1;
+            padding: 15px;
+            background: #f0f0f0;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .mode-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .upload-section, .camera-section {
+            display: none;
+        }
+
+        .upload-section.active, .camera-section.active {
+            display: block;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            background: #f8f9ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .file-input-wrapper:hover {
+            background: #f0f2ff;
+            border-color: #764ba2;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-input-wrapper .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .camera-preview {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+            display: block;
+            background: #000;
+        }
+
+        .camera-controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .result-section {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-section.active {
+            display: block;
+        }
+
+        .result-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .result-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .plate-number {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .confidence {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            display: none;
+            background: #f44336;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .preview-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="nav-link">← 返回首页</a>
+        <div class="header">
+            <h1>🚗 车牌识别</h1>
+            <p>使用YOLO+OCR模型识别车牌号码</p>
+        </div>
+
+        <div class="model-selector">
+            <label>选择模型</label>
+            <select id="modelSelect">
+                <option value="">加载中...</option>
+            </select>
+        </div>
+
+        <div class="mode-tabs">
+            <div class="mode-tab active" data-mode="upload">📷 上传图片</div>
+            <div class="mode-tab" data-mode="camera">📹 摄像头识别</div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="upload-section active" id="uploadSection">
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput" accept="image/*">
+                <div class="icon">📁</div>
+                <div>点击或拖拽图片到此处上传</div>
+            </div>
+            <img id="previewImage" class="preview-image" style="display: none;" alt="预览">
+            <div class="camera-controls">
+                <button class="btn btn-primary" id="recognizeBtn">开始识别</button>
+            </div>
+        </div>
+
+        <div class="camera-section" id="cameraSection">
+            <video id="videoPreview" class="camera-preview" autoplay playsinline></video>
+            <canvas id="canvasCapture" style="display: none;"></canvas>
+            <div class="camera-controls">
+                <button class="btn btn-success" id="startCameraBtn">开启摄像头</button>
+                <button class="btn btn-primary" id="captureBtn" disabled>拍照识别</button>
+                <button class="btn btn-danger" id="stopCameraBtn" disabled>关闭摄像头</button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>正在识别中，请稍候...</p>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <img id="resultImage" class="result-image" alt="识别结果" style="display: none;">
+            <div class="result-info">
+                <h3>识别结果</h3>
+                <div id="plateResult">
+                    <div class="plate-number" id="plateNumber">-</div>
+                    <div class="confidence" id="confidence"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let stream = null;
+        const modelSelect = document.getElementById('modelSelect');
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('previewImage');
+        const recognizeBtn = document.getElementById('recognizeBtn');
+        const startCameraBtn = document.getElementById('startCameraBtn');
+        const captureBtn = document.getElementById('captureBtn');
+        const stopCameraBtn = document.getElementById('stopCameraBtn');
+        const videoPreview = document.getElementById('videoPreview');
+        const canvasCapture = document.getElementById('canvasCapture');
+        const modeTabs = document.querySelectorAll('.mode-tab');
+        const uploadSection = document.getElementById('uploadSection');
+        const cameraSection = document.getElementById('cameraSection');
+        const loading = document.getElementById('loading');
+        const resultSection = document.getElementById('resultSection');
+        const errorMessage = document.getElementById('errorMessage');
+        const plateNumber = document.getElementById('plateNumber');
+        const confidence = document.getElementById('confidence');
+
+        // 加载模型列表
+        async function loadModels() {
+            try {
+                const response = await fetch('/api/list_models?model_type=car_yolo_ocr');
+                const data = await response.json();
+                if (data.status === 'success') {
+                    modelSelect.innerHTML = '<option value="">请选择模型</option>';
+                    data.models.forEach(model => {
+                        const option = document.createElement('option');
+                        option.value = model.model_dir;
+                        option.textContent = model.model_name || model.model_dir;
+                        modelSelect.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('加载模型列表失败:', error);
+            }
+        }
+
+        // 图片预览
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 模式切换
+        modeTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                modeTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const mode = tab.dataset.mode;
+                if (mode === 'upload') {
+                    uploadSection.classList.add('active');
+                    cameraSection.classList.remove('active');
+                    stopCamera();
+                } else {
+                    uploadSection.classList.remove('active');
+                    cameraSection.classList.add('active');
+                }
+            });
+        });
+
+        // 上传图片识别
+        recognizeBtn.addEventListener('click', async () => {
+            const modelDir = modelSelect.value;
+            if (!modelDir) {
+                showError('请先选择模型');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            if (!file) {
+                showError('请选择图片文件');
+                return;
+            }
+
+            await recognizeImage(file, modelDir);
+        });
+
+        // 摄像头识别
+        startCameraBtn.addEventListener('click', startCamera);
+        captureBtn.addEventListener('click', captureAndRecognize);
+        stopCameraBtn.addEventListener('click', stopCamera);
+
+        async function startCamera() {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { width: 640, height: 480 } 
+                });
+                videoPreview.srcObject = stream;
+                startCameraBtn.disabled = true;
+                captureBtn.disabled = false;
+                stopCameraBtn.disabled = false;
+            } catch (error) {
+                showError('无法访问摄像头: ' + error.message);
+            }
+        }
+
+        function stopCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                stream = null;
+                videoPreview.srcObject = null;
+                startCameraBtn.disabled = false;
+                captureBtn.disabled = true;
+                stopCameraBtn.disabled = true;
+            }
+        }
+
+        async function captureAndRecognize() {
+            const modelDir = modelSelect.value;
+            if (!modelDir) {
+                showError('请先选择模型');
+                return;
+            }
+
+            const ctx = canvasCapture.getContext('2d');
+            canvasCapture.width = videoPreview.videoWidth;
+            canvasCapture.height = videoPreview.videoHeight;
+            ctx.drawImage(videoPreview, 0, 0);
+
+            canvasCapture.toBlob(async (blob) => {
+                await recognizeImage(blob, modelDir);
+            }, 'image/jpeg');
+        }
+
+        async function recognizeImage(file, modelDir) {
+            hideError();
+            loading.classList.add('active');
+            resultSection.classList.remove('active');
+
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('model_dir', modelDir);
+
+                const response = await fetch('/api/car_recognition', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                loading.classList.remove('active');
+
+                if (result.status === 'success') {
+                    plateNumber.textContent = result.plate_number || '未识别';
+                    
+                    if (result.detected && result.confidence) {
+                        confidence.textContent = `置信度: ${(result.confidence * 100).toFixed(2)}%`;
+                        confidence.style.display = 'block';
+                    } else {
+                        confidence.style.display = 'none';
+                    }
+
+                    // 显示识别结果图片（如果返回了带标注的图片）
+                    if (result.image) {
+                        document.getElementById('resultImage').src = result.image;
+                        document.getElementById('resultImage').style.display = 'block';
+                    } else if (file instanceof File || file instanceof Blob) {
+                        // 如果没有返回图片，显示原始图片
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            document.getElementById('resultImage').src = e.target.result;
+                            document.getElementById('resultImage').style.display = 'block';
+                        };
+                        reader.readAsDataURL(file);
+                    }
+
+                    resultSection.classList.add('active');
+                } else {
+                    showError(result.message || '识别失败');
+                }
+            } catch (error) {
+                loading.classList.remove('active');
+                showError('识别失败: ' + error.message);
+            }
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.add('active');
+        }
+
+        function hideError() {
+            errorMessage.classList.remove('active');
+        }
+
+        // 初始化
+        loadModels();
+    </script>
+</body>
+</html>

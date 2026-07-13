@@ -1,0 +1,9 @@
+1.进入终端
+2.激活虚拟环境，conda activate env_rec （自己的环境名字）
+3.切换到代码目录car_num_demo
+4.启动web服务器端，python flask_server.py
+服务器启动成功后，在浏览器里，输入127.0.0.1:8000进入web页面
+5.启动停车场QT端   重新开启一个新的终端，重复1-3步骤
+python car_plate_recognition_app.py
+qt端运行成功后会直接启动一个桌面应用页面
+

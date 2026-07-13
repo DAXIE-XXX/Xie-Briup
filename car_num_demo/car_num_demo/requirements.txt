@@ -1,0 +1,26 @@
+# ==========================================
+# 车牌识别系统 - 完整依赖列表
+# 安装命令: pip install -r requirements.txt
+# ==========================================
+
+# 核心依赖
+numpy>=1.19.0
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# ONNX 推理引擎
+onnxruntime>=1.8.0
+onnx>=1.10.0
+
+# 桌面应用 GUI
+PyQt5>=5.15.0
+
+# Web 服务
+flask>=2.0.0
+flask-sqlalchemy>=2.5.0
+
+# 数据库 ORM
+sqlalchemy>=1.4.0
+
+# HTTP 客户端
+requests>=2.25.0

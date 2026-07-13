@@ -1,0 +1,12 @@
+{
+  "model_type": "car_yolo_ocr",
+  "model_name": "车牌识别模型V1",
+  "upload_time": "2026-01-23 10-42-06",
+  "yolo_file": "yolo_best.onnx",
+  "ocr_file": "ocr_best.onnx",
+  "ocr_dict_file": "car_number_dict.txt",
+  "conf": "0.6",
+  "iou": "0.5",
+  "ocr_shape": "3,48,320",
+  "padding": "True"
+}
