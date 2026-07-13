@@ -1,0 +1,634 @@
+[
+    {
+        "classes": [
+            {
+                "className": "SensorController",
+                "lineNumber": 24,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "connected",
+                        "notify": "connectedChanged",
+                        "read": "isConnected",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "serverIp",
+                        "notify": "serverIpChanged",
+                        "read": "serverIp",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "serverPort",
+                        "notify": "serverPortChanged",
+                        "read": "serverPort",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "temperature",
+                        "notify": "dataChanged",
+                        "read": "temperature",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "humidity",
+                        "notify": "dataChanged",
+                        "read": "humidity",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "co2",
+                        "notify": "dataChanged",
+                        "read": "co2",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "pm25",
+                        "notify": "dataChanged",
+                        "read": "pm25",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "methane",
+                        "notify": "dataChanged",
+                        "read": "methane",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "light",
+                        "notify": "dataChanged",
+                        "read": "light",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "smoke",
+                        "notify": "dataChanged",
+                        "read": "smoke",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 10,
+                        "name": "fire",
+                        "notify": "dataChanged",
+                        "read": "fire",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 11,
+                        "name": "co2Max",
+                        "notify": "thresholdChanged",
+                        "read": "co2Max",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 12,
+                        "name": "pm25Max",
+                        "notify": "thresholdChanged",
+                        "read": "pm25Max",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 13,
+                        "name": "tempMax",
+                        "notify": "thresholdChanged",
+                        "read": "tempMax",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 14,
+                        "name": "tempMin",
+                        "notify": "thresholdChanged",
+                        "read": "tempMin",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 15,
+                        "name": "methaneEnable",
+                        "notify": "thresholdChanged",
+                        "read": "methaneEnable",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 16,
+                        "name": "cooldownSeconds",
+                        "notify": "thresholdChanged",
+                        "read": "cooldownSeconds",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 17,
+                        "name": "fanCooldownSeconds",
+                        "notify": "thresholdChanged",
+                        "read": "fanCooldownSeconds",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "SensorController",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "connectedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "serverIpChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "serverPortChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "dataChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "thresholdChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "action",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "value",
+                                "type": "double"
+                            },
+                            {
+                                "name": "timestamp",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 5,
+                        "name": "alertReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "sensorType",
+                                "type": "int"
+                            },
+                            {
+                                "name": "range",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "dataJson",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "historyReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "msg",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "historyQueryError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "errorMsg",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "connectionError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "success",
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "thresholdApplied",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "ip",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "port",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "connectToServer",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 11,
+                        "name": "disconnectFromServer",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "sensorType",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "requestSensor",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "controlType",
+                                "type": "int"
+                            },
+                            {
+                                "name": "params",
+                                "type": "QVariantMap"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "sendControl",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "co2Max",
+                                "type": "int"
+                            },
+                            {
+                                "name": "pm25Max",
+                                "type": "int"
+                            },
+                            {
+                                "name": "tempMax",
+                                "type": "double"
+                            },
+                            {
+                                "name": "tempMin",
+                                "type": "double"
+                            },
+                            {
+                                "name": "methaneEnable",
+                                "type": "bool"
+                            },
+                            {
+                                "name": "cooldownSeconds",
+                                "type": "int"
+                            },
+                            {
+                                "name": "fanCooldownSeconds",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "applyThreshold",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "sensorType",
+                                "type": "int"
+                            },
+                            {
+                                "name": "range",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "queryHistory",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "data",
+                                "type": "QJsonObject"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "onDataReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "cmd",
+                                "type": "QJsonObject"
+                            }
+                        ],
+                        "index": 17,
+                        "name": "onServerCommand",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 18,
+                        "name": "onConnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 19,
+                        "name": "onDisconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 20,
+                        "name": "onError",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "sensorcontroller.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "TcpClient",
+                "lineNumber": 28,
+                "object": true,
+                "qualifiedClassName": "TcpClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "connected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "disconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "msg",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "data",
+                                "type": "QJsonObject"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "dataReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "cmd",
+                                "type": "QJsonObject"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "serverCommandReceived",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 5,
+                        "name": "onConnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 6,
+                        "name": "onDisconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QAbstractSocket::SocketError"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "onError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 8,
+                        "name": "onReadyRead",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "tcpclient.h",
+        "outputRevision": 68
+    }
+]

@@ -1,0 +1,25 @@
+/***
+ * \file    devices_environment.h
+ * 
+ * \copyright   Copyright [2020] by Briup .
+ *              All rights reserved. This software and code comprise proprietary
+ *              information of Briup. This software and code may not be reproduced,
+ *              used, altered, reengineered, distributed or disclosed to others
+ *              without the written consent of Briup.
+ * \create  John.Chen   2020-11-30
+ * 
+ * \brief   »·¾³¼à²âÄ£¿éÇý¶¯
+*/
+#ifndef DEVICES_ENVIRONMENT_H
+#define DEVICES_ENVIRONMENT_H
+
+#include "system_option.h"
+
+#define Fire_Measure()      PBxIn(0)			//»ð¹â¼ì²â
+#define Methane_Measure()   PBxIn(1)			//¼×Íé¼ì²â
+#define Smog_Measure()      PBxIn(6)			//ÑÌÎí¼ì²â
+#define Infrared_Measure()  PBxIn(7)			//ÈËÌåºìÍâ¼ì²â
+
+void devices_environment_init(void);
+
+#endif

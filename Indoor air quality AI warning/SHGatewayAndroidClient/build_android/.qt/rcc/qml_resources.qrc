@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="qml/main.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/main.qml</file>
+    <file alias="qml/LoginPage.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/LoginPage.qml</file>
+    <file alias="qml/DashboardPage.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/DashboardPage.qml</file>
+    <file alias="qml/ControlPage.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/ControlPage.qml</file>
+    <file alias="qml/ChartPage.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/ChartPage.qml</file>
+    <file alias="qml/ThresholdPage.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/ThresholdPage.qml</file>
+    <file alias="qml/AlertDialog.qml">E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/qml/AlertDialog.qml</file>
+  </qresource>
+</RCC>
+

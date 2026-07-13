@@ -1,0 +1,2 @@
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/GatewayClient_autogen/include/../EWIEGA46WW/moc_sensorcontroller.cpp.json
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/GatewayClient_autogen/include/../EWIEGA46WW/moc_tcpclient.cpp.json

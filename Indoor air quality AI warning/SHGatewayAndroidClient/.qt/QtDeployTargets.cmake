@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_GatewayClient_FILE E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/libGatewayClient_arm64-v8a.so)
+set(__QT_DEPLOY_TARGET_GatewayClient_TYPE MODULE_LIBRARY)

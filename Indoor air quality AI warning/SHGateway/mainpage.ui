@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainPage</class>
+ <widget class="QWidget" name="MainPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>687</width>
+    <height>531</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>智能家居网关</string>
+  </property>
+  <widget class="QGroupBox" name="groupBoxSerial">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>360</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>串口设置</string>
+   </property>
+   <widget class="QLabel" name="labelPort">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>端口：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboPort">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>28</y>
+      <width>140</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBaud">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>波特率：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBaud">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>68</y>
+      <width>140</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnOpenSerial">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>28</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开串口</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCloseSerial">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>68</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭串口</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxControl">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>160</y>
+     <width>271</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>设备控制</string>
+   </property>
+   <widget class="QPushButton" name="btnAlarmOn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开报警器</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAlarmOff">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭报警器</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAlarmLightOn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开报警灯</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAlarmLightOff">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭报警灯</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLED2On">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开 LED2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLED2Off">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>140</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭 LED2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFanOn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开风扇</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFanOff">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>190</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭风扇</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxNet">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>20</y>
+     <width>271</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>服务器连接</string>
+   </property>
+   <widget class="QLabel" name="labelIP">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IP：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editIP">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>30</y>
+      <width>131</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>127.0.0.1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPortSrv">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Port：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editPort">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>70</y>
+      <width>131</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>10086</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnConnectServer">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>50</y>
+      <width>61</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>连接</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxSensor">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>361</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>传感器控制</string>
+   </property>
+   <widget class="QPushButton" name="btnPM25">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测PM2.5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPM25">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCo2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测CO2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCo2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>60</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMethane">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测甲烷</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMethane">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTemperature">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测温度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTemperature">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLight">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测光照</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLight">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>180</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSmoke">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测烟雾</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSmoke">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>220</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFire">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测火光</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFire">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>260</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHumidity">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>71</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测湿度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelHumidity">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>300</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 1px solid gray; padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

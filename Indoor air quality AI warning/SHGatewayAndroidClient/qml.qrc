@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/LoginPage.qml</file>
+        <file>qml/DashboardPage.qml</file>
+        <file>qml/ControlPage.qml</file>
+        <file>qml/ChartPage.qml</file>
+        <file>qml/ThresholdPage.qml</file>
+        <file>qml/AlertDialog.qml</file>
+    </qresource>
+</RCC>

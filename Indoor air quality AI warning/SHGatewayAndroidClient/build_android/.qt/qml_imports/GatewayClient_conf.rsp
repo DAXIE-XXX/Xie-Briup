@@ -1,0 +1,11 @@
+-rootPath
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient
+-cmake-output
+-output-file
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/.qt/qml_imports/GatewayClient_conf.cmake
+-importPath
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android
+-importPath
+E:/Qt/6.8.3/android_arm64_v8a/qml
+-qrcFiles
+E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/.qt/rcc/qml_resources.qrc

@@ -1,0 +1,19 @@
+#ifndef __AGREEMENT_H
+#define __AGREEMENT_H
+//数据解析，保存
+#include "stm32f10x.h"
+
+
+typedef struct {
+	u8 addr; //节点号
+	u8 device;//设备号
+	u8 data_len	;//数据长度
+	u8 data[32];//数据
+}app_agreement,*app_agreement_pt;
+
+void app_dev_procotol(app_agreement_pt p);
+void analysis(u16 r_len,u8 *buf);
+#endif
+
+
+

@@ -1,0 +1,43 @@
+# ninja log v6
+1681	1773	8053553903093175	CMakeFiles/GatewayClient.dir/build_android/.qt/rcc/qrc_qml_resources.cpp.o	d846473d546ef6c2
+33	343	8053562462232282	GatewayClient_autogen/timestamp	b84a5a5aa6107438
+345	404	8053562465883223	meta_types/GatewayClient_json_file_list.txt.timestamp	7fb48dfc5d794301
+33	343	8053562462232282	GatewayClient_autogen/mocs_compilation.cpp	b84a5a5aa6107438
+33	343	8053562462232282	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/GatewayClient_autogen/timestamp	b84a5a5aa6107438
+33	343	8053562462232282	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/GatewayClient_autogen/mocs_compilation.cpp	b84a5a5aa6107438
+526	617	8053562467167279	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/CMakeFiles/GatewayClient_prepare_apk_dir	87f4a27e150afc72
+345	404	8053562465883223	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/GatewayClient_json_file_list.txt	7fb48dfc5d794301
+345	404	8053562465883223	meta_types/GatewayClient_json_file_list.txt	7fb48dfc5d794301
+345	404	8053562465883223	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/GatewayClient_json_file_list.txt.timestamp	7fb48dfc5d794301
+1416	1473	8053553900929093	.qt/rcc/qrc_qml_resources.cpp	264b676f779c64dd
+1416	1473	8053553900929093	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/.qt/rcc/qrc_qml_resources.cpp	264b676f779c64dd
+404	525	8053562465949237	meta_types/qt6gatewayclient_debug_metatypes.json.gen	4aee757f1c3de336
+404	525	8053562465949237	meta_types/qt6gatewayclient_debug_metatypes.json	4aee757f1c3de336
+404	525	8053562465949237	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/qt6gatewayclient_debug_metatypes.json.gen	4aee757f1c3de336
+404	525	8053562465949237	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/qt6gatewayclient_debug_metatypes.json	4aee757f1c3de336
+1572	3059	8053553902004326	CMakeFiles/GatewayClient.dir/GatewayClient_autogen/mocs_compilation.cpp.o	febc1ad138ed4123
+1624	3094	8053553902519422	CMakeFiles/GatewayClient.dir/tcpclient.cpp.o	c4e51460b9cb2a2c
+1652	3156	8053553902810009	CMakeFiles/GatewayClient.dir/sensorcontroller.cpp.o	7bdbe318167e65c5
+1597	3320	8053553902256318	CMakeFiles/GatewayClient.dir/main.cpp.o	fc3f1b6c023bf7ab
+3321	3518	8053553919499827	libGatewayClient_arm64-v8a.so	96887442c94a0ef8
+526	617	8053562467167279	CMakeFiles/GatewayClient_prepare_apk_dir	87f4a27e150afc72
+617	15937	8053562619330349	android-build/GatewayClient.apk	7ba73d5e64c22d3a
+617	15937	8053562619330349	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/android-build/GatewayClient.apk	7ba73d5e64c22d3a
+30	343	8053566693026611	GatewayClient_autogen/timestamp	b84a5a5aa6107438
+30	343	8053566693026611	GatewayClient_autogen/mocs_compilation.cpp	b84a5a5aa6107438
+30	343	8053566693026611	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/GatewayClient_autogen/timestamp	b84a5a5aa6107438
+30	343	8053566693026611	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/GatewayClient_autogen/mocs_compilation.cpp	b84a5a5aa6107438
+345	401	8053566696680287	meta_types/GatewayClient_json_file_list.txt	7fb48dfc5d794301
+345	401	8053566696680287	meta_types/GatewayClient_json_file_list.txt.timestamp	7fb48dfc5d794301
+345	401	8053566696680287	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/GatewayClient_json_file_list.txt	7fb48dfc5d794301
+345	401	8053566696680287	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/GatewayClient_json_file_list.txt.timestamp	7fb48dfc5d794301
+401	506	8053566696737164	meta_types/qt6gatewayclient_debug_metatypes.json.gen	4aee757f1c3de336
+401	506	8053566696737164	meta_types/qt6gatewayclient_debug_metatypes.json	4aee757f1c3de336
+401	506	8053566696737164	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/qt6gatewayclient_debug_metatypes.json.gen	4aee757f1c3de336
+401	506	8053566696737164	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/meta_types/qt6gatewayclient_debug_metatypes.json	4aee757f1c3de336
+507	2124	8053566697787246	CMakeFiles/GatewayClient.dir/main.cpp.o	fc3f1b6c023bf7ab
+2124	2348	8053566713972113	libGatewayClient_arm64-v8a.so	4903d81e80208fdd
+2348	2449	8053566716201366	CMakeFiles/GatewayClient_prepare_apk_dir	87f4a27e150afc72
+2348	2449	8053566716201366	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/CMakeFiles/GatewayClient_prepare_apk_dir	87f4a27e150afc72
+2449	17017	8053566861037632	android-build/GatewayClient.apk	7ba73d5e64c22d3a
+2449	17017	8053566861037632	E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient/build_android/android-build/GatewayClient.apk	7ba73d5e64c22d3a

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmake --version)",
+      "Bash(ninja --version)",
+      "Read(//e//**)",
+      "Bash(cmake -B build -S . -G \"MinGW Makefiles\" -DCMAKE_PREFIX_PATH=E:/Qt/6.8.3/mingw_64 -DCMAKE_BUILD_TYPE=Debug)",
+      "Bash(cmake --build .)",
+      "Bash(cmake --build build --config Debug)"
+    ]
+  }
+}

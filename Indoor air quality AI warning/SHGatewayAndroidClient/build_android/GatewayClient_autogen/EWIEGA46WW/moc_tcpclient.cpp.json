@@ -1,0 +1,100 @@
+{
+    "classes": [
+        {
+            "className": "TcpClient",
+            "lineNumber": 28,
+            "object": true,
+            "qualifiedClassName": "TcpClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "connected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "disconnected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "msg",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "errorOccurred",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "dataReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "cmd",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "serverCommandReceived",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 5,
+                    "name": "onConnected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 6,
+                    "name": "onDisconnected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "error",
+                            "type": "QAbstractSocket::SocketError"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "onError",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 8,
+                    "name": "onReadyRead",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "tcpclient.h",
+    "outputRevision": 68
+}

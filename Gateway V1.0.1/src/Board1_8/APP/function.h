@@ -1,0 +1,14 @@
+#ifndef __FUNCTION_H
+#define __FUNCTION_H
+#include "config.h"
+#include "system_stm32f10x.h"
+#include "agreement.h"
+
+void devices_init(void);
+
+void app_dev_procotol(app_agreement_pt p);
+#endif
+
+
+
+

@@ -1,0 +1,186 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GatewayClient",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient-Debug-bce7879325276b701fc3.json",
+					"name" : "GatewayClient",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_autogen-Debug-b3a253a69e8742a75108.json",
+					"name" : "GatewayClient_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_autogen_timestamp_deps-Debug-5dd03df643c36765bd7c.json",
+					"name" : "GatewayClient_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_copy_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_copy_apk_dependencies-Debug-71eb8209cbc985b2663f.json",
+					"name" : "GatewayClient_copy_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_make_aab-Debug-ecb5d5e452c95d2df208.json",
+					"name" : "GatewayClient_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_make_aar-Debug-a08733f7289f0cd9c631.json",
+					"name" : "GatewayClient_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_make_apk-Debug-9ef0a1cde073ad789b82.json",
+					"name" : "GatewayClient_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_other_files-Debug-0c3c3cf0d0f06e01b9b0.json",
+					"name" : "GatewayClient_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GatewayClient_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GatewayClient_prepare_apk_dir-Debug-a269f1594d3346fc1ac4.json",
+					"name" : "GatewayClient_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-d794144a4d8141e3ddc8.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-0d864c77784f2c3a9387.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aar-Debug-fbeaeb9f4c45868b98e1.json",
+					"name" : "aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-c21619c6e5424c1a1eb5.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-d8f1f4afc4f28652ead7.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-3c025b64e1e6790662c7.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient",
+		"source" : "E:/XIEXIAOXUAN/briupProject/Indoor air quality AI warning/SHGatewayAndroidClient"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
